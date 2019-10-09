@@ -1,0 +1,20 @@
+server:
+  port: 8082
+dubbo:
+  application:
+    name: consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: consumer
+    port: 20880
+spring:
+  thymeleaf:
+    prefix: classpath:/template/
+  mvc:
+    static-path-pattern: /static/**
+  devtools:
+    restart:
+      enabled: true
+  freemarker:
+    cache: false
